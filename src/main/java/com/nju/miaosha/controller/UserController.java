@@ -1,18 +1,30 @@
 package com.nju.miaosha.controller;
 
-import com.nju.miaosha.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-@RestController
-@RequestMapping("/")
+import com.nju.miaosha.domain.MiaoshaUser;
+import com.nju.miaosha.redis.RedisService;
+import com.nju.miaosha.result.Result;
+import com.nju.miaosha.service.MiaoshaUserService;
+
+@Controller
+@RequestMapping("/user")
 public class UserController {
-    @Autowired
-    UserService userService;
 
-    @RequestMapping("/user")
-    public String getUser() {
-        return userService.getUserById(1).toString();
+	@Autowired
+	MiaoshaUserService userService;
+	
+	@Autowired
+	RedisService redisService;
+	
+    @RequestMapping("/info")
+    @ResponseBody
+    public Result<MiaoshaUser> info(Model model,MiaoshaUser user) {
+        return Result.success(user);
     }
+    
 }
