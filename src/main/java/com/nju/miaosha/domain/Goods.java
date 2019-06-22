@@ -1,5 +1,8 @@
 package com.nju.miaosha.domain;
 
+/**
+ * @author Denny
+ */
 public class Goods {
 	private Long id;
 	private String goodsName;

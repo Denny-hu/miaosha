@@ -36,6 +36,9 @@ import com.nju.miaosha.service.MiaoshaUserService;
 import com.nju.miaosha.service.OrderService;
 import com.nju.miaosha.vo.GoodsVo;
 
+/**
+ * @author Denny
+ */
 @Controller
 @RequestMapping("/miaosha")
 public class MiaoshaController implements InitializingBean {

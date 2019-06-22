@@ -18,6 +18,9 @@ import com.nju.miaosha.service.OrderService;
 import com.nju.miaosha.vo.GoodsVo;
 import com.nju.miaosha.vo.OrderDetailVo;
 
+/**
+ * @author Denny
+ */
 @Controller
 @RequestMapping("/order")
 public class OrderController {

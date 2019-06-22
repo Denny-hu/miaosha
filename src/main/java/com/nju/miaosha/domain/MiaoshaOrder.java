@@ -1,5 +1,8 @@
 package com.nju.miaosha.domain;
 
+/**
+ * @author Denny
+ */
 public class MiaoshaOrder {
 	private Long id;
 	private Long userId;

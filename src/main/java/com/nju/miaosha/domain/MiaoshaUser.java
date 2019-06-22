@@ -2,6 +2,9 @@ package com.nju.miaosha.domain;
 
 import java.util.Date;
 
+/**
+ * @author Denny
+ */
 public class MiaoshaUser {
 	private Long id;
 	private String nickname;
